@@ -1,0 +1,16 @@
+<div class="container">
+    <main>
+        <div class="dob">
+            <label>Enter Your Date Of Birth</label>
+            <input [formControl]="inputControl">
+            <!-- <button (click)="handleClick()">Log Input Value</button> -->
+            <button (click)="logClick()" >Log 2</button>
+        </div>
+        <br>
+        <div class="output">
+            <div class="vedic">
+                    <app-square *ngFor="let val of displaySquares;let i=index" [value]="val" ></app-square> 
+            </div>
+        </div>
+    </main>
+</div>

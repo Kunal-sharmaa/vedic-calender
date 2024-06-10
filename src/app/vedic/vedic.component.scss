@@ -1,0 +1,89 @@
+$primary-color: #3498db;
+$border-color: #ccc;
+$background-color: #f9f9f9;
+$input-padding: 0.75rem;
+$input-font-size: 1rem;
+$border-radius: 4px;
+$transition: 0.3s ease;
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: #54426B;
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .dob {
+            color: aquamarine;
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 2;
+            width: 600px;
+            
+            
+
+  
+        }
+        .output {
+            display: flex;
+            flex-direction: row;
+            
+        }
+    }
+}
+    .vedic {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 150px);
+                
+                
+            }
+
+    app-square {
+                    border: gray solid;
+                    height: 150px;
+                    width: 150px;
+                    justify-content: center;
+                    align-items: center;
+                }
+button {
+    padding: $input-padding;
+    font-size: $input-font-size;
+    color: #fff;
+    background-color: $primary-color;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background-color $transition, transform $transition;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      transform: scale(1.05);
+    }
+
+    &:active {
+      background-color: darken($primary-color, 15%);
+    }
+  }
+
+
+input {
+    padding: $input-padding;
+    font-size: $input-font-size;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    margin-bottom: 1rem;
+  }
+
+
+label {
+                color: #E9F1F7;
+                width: 600px;
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
