@@ -20,6 +20,7 @@ export class VedicComponent implements OnInit {
         inputControl = new FormControl(); //taking value from user.
         displaySquares: (string | null)[] = [];
         sumDestinyNumber :number = 0;
+        currentlyEnabled: boolean = false;
           // Function triggered would be the first this for this component.
 
         ngOnInit(): void {
@@ -40,6 +41,7 @@ export class VedicComponent implements OnInit {
           this.enterBasicno();//! Entering basic no.
           this.enterDestinyno();//! Entering destiny no.
           this.addingValues();
+          this.currentlyEnabled = true;
           console.log(this.newElement+" new element array");
           console.log(this.displaySquares+" display squares array");
           console.log(this.sumDestinyNumber+" DN");
@@ -48,6 +50,10 @@ export class VedicComponent implements OnInit {
           
         }
         
+        reloadPage(): void {
+          window.location.reload();
+        }
+
         //? extracting  numeric part
         extractNumericPart(input: string): string {
             const match = input.match(/\d+/);//\d for numbers, match() is a function.

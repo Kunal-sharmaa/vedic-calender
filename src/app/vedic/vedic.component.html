@@ -4,7 +4,11 @@
             <label>Enter Your Date Of Birth</label>
             <input [formControl]="inputControl">
             <!-- <button (click)="handleClick()">Log Input Value</button> -->
-            <button (click)="logClick()" >Log 2</button>
+            <button (click)="logClick()" [disabled]="currentlyEnabled">Enter</button>
+            <br>
+            <button (click)="reloadPage()" >Reload</button>
+            <br>
+            <h3>Reload page to enter a new number.</h3>
         </div>
         <br>
         <div class="output">
